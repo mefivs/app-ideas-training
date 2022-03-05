@@ -1,0 +1,13 @@
+.backButton {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
+    &:hover {
+        border-color: #FFF;
+    }
+}
