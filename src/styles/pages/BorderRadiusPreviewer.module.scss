@@ -1,0 +1,14 @@
+.borderRadiusPreviewerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .boxContainer {
+        width: 20rem;
+        height: auto;
+        padding: 5rem;
+        border: 5px dashed #CCC;
+    }
+}
