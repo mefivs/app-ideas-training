@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BackButton from './components/BackButton';
+import ColorModeChanger from './components/ColorModeChanger';
 import Bin2Dec from './pages/Bin2Dec';
 import BorderRadiusPreviewer from './pages/BorderRadiusPreviewer';
 
@@ -12,6 +13,7 @@ function NavigationRoutes() {
     return (
         <BrowserRouter>
                 <BackButton />
+                <ColorModeChanger />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/bin2dec' element={<Bin2Dec />} />

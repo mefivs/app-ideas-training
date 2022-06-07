@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {  
+    --foreground-color: #FFF;
+    --text-color: #d1d1d1;
+    --background-color: #0f0f0f;
+    --border-color: #353535;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -29,6 +36,7 @@ a {
 }
 
 body {
-    color: #FFF;
-    background-color: rgb(15, 15, 15);
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+    transition: all 0.3s;
 }

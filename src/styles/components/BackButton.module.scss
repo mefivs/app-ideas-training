@@ -1,13 +1,16 @@
 .backButton {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
     position: fixed;
     top: 2rem;
     left: 2rem;
-    color: #FFF;
+    color: var(--foreground-color);
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     transition: all 0.3s;
     border-bottom: 1px solid transparent;
     &:hover {
-        border-color: #FFF;
+        border-color: var(--foreground-color);
     }
 }
