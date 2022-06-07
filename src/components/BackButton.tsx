@@ -11,7 +11,7 @@ function BackButton() {
 
     return (
         <Link to='/' style={currentLocation.pathname === '/' ? { display: 'none' } : { display: 'flex' }} className={styles.backButton}>
-           <Backspace /> Back
+           <Backspace weight='fill' /> Back
         </Link>
     );
 }

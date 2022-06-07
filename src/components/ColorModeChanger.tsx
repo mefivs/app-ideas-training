@@ -26,7 +26,7 @@ function ColorModeChanger() {
 
     return (
         <button type='button' onClick={modeSwitch} className={styles.colorModeButton}>
-            {mode === 'Light' ? <Moon /> : <Sun />}
+            {mode === 'Light' ? <Moon weight='bold' /> : <Sun weight='bold' />}
         </button>
     )
 }

@@ -4,6 +4,7 @@ import BackButton from './components/BackButton';
 import ColorModeChanger from './components/ColorModeChanger';
 import Bin2Dec from './pages/Bin2Dec';
 import BorderRadiusPreviewer from './pages/BorderRadiusPreviewer';
+import Calculator from './pages/Calculator';
 
 import Home from './pages/Home';
 
@@ -18,6 +19,7 @@ function NavigationRoutes() {
                 <Route path='/' element={<Home />} />
                 <Route path='/bin2dec' element={<Bin2Dec />} />
                 <Route path='/border-radius-previewer' element={<BorderRadiusPreviewer />} />
+                <Route path='/calculator' element={<Calculator />} />
             </Routes>
         </BrowserRouter>
     )

@@ -11,6 +11,7 @@ function Home() {
         <div className={styles.homeContainer}>
             <AppSelector stepLink='/bin2dec' stepNumber={'01'} stepLabel={'Bin2Dec'}/>
             <AppSelector stepLink='/border-radius-previewer' stepNumber={'02'} stepLabel={'Border-Radius Previewer'}/>
+            <AppSelector stepLink='/calculator' stepNumber={'03'} stepLabel={'Calculator'}/>
         </div>
     );
 }
