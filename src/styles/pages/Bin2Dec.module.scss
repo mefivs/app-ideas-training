@@ -38,7 +38,7 @@
         transition: all 0.3s;
         color: var(--text-color);
         &:focus {
-            border-color: #5e14a3;
+            border-color: var(--primary);
             background-color: var(--background-color);
         }
     }
@@ -50,5 +50,5 @@
 
 .errorMessage {
     margin-top: 1rem;
-    color: #c71313;
+    color: var(--error);
 }

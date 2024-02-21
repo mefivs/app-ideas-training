@@ -9,6 +9,9 @@
     --text-color: #d1d1d1;
     --background-color: #0f0f0f;
     --border-color: #353535;
+    --primary: #ae00ff;
+    --secondary: #ff9101;
+    --error: #c71313
 }
 
 ::-webkit-scrollbar {
@@ -28,6 +31,10 @@ html,
 body {
     height: 100vh;
     width: 100vw;
+    font-family: sans-serif;
+}
+
+button{
     font-family: sans-serif;
 }
 

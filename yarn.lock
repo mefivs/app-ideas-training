@@ -7182,9 +7182,9 @@ react-scripts@5.0.0:
     fsevents "^2.3.2"
 
 react@7.0.2:
-  version "18.2.0-next-e531a4a62-20220505"
-  resolved "https://registry.yarnpkg.com/react/-/react-18.2.0-next-e531a4a62-20220505.tgz#6930b93958232346dd5a20f7104bce70937defde"
-  integrity sha512-Kg5EIR3ZO6KEctwIT0zqJ5czlvrVoThm9CrPUC2VaDHrZ0S/I8OXSbNjE/8UHJhLRYs7wo7stwCAjWhT7FgP+A==
+  version "18.3.0-next-fecc288b7-20221025"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.3.0-next-fecc288b7-20221025.tgz#8da77f8c8221bb2761ed817b7638feb108ba791c"
+  integrity sha512-lKvCNWRO9XPy8q7hLd0ODK/4Oqr54r3Vr49Y7EyNBz/kfsmNT6Vx0F69KRz/eGcbt1XDvtbA7KZd+mh8w3wONQ==
   dependencies:
     loose-envify "^1.1.0"
 
