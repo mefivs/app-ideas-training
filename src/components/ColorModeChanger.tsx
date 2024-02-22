@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 
-function ColorModeChanger() {
+export function ColorModeChanger() {
     const [mode, setMode] = useState<'Dark' | 'Light'>('Dark');
 
     function modeSwitch() {
@@ -30,5 +30,3 @@ function ColorModeChanger() {
         </button>
     )
 }
-
-export default ColorModeChanger;

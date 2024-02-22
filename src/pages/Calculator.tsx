@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/pages/Calculator.module.scss';
 
-function Calculator() {
+export function Calculator() {
     const padButtons = [['1', '2', '3', '/'], ['4', '5', '6', '-'], ['7', '8', '9', '+'], ['AC', '0', 'C', '=']]
     const [num1, setNum1] = useState<null | string>(null);
     const [num2, setNum2] = useState<null | string>(null);
@@ -158,5 +158,3 @@ function Calculator() {
         </div>
     );
 }
-
-export default Calculator;

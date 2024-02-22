@@ -1,11 +1,10 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {Backspace} from 'phosphor-react';
 
 import styles from '../styles/components/BackButton.module.scss'
 
 
-function BackButton() {
+export function BackButton() {
 
     const currentLocation = useLocation();
 
@@ -15,5 +14,3 @@ function BackButton() {
         </Link>
     );
 }
-
-export default BackButton;

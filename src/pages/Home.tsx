@@ -1,4 +1,3 @@
-import React from 'react';
 import AppSelector from '../components/AppSelector';
 
 import styles from '../styles/pages/Home.module.scss';
@@ -12,6 +11,7 @@ function Home() {
             <AppSelector stepLink='/bin2dec' stepNumber={'01'} stepLabel={'Bin2Dec'}/>
             <AppSelector stepLink='/border-radius-previewer' stepNumber={'02'} stepLabel={'Border-Radius Previewer'}/>
             <AppSelector stepLink='/calculator' stepNumber={'03'} stepLabel={'Calculator'}/>
+            <AppSelector stepLink='/christmas-lights' stepNumber={'04'} stepLabel={'Christmas Lights'}/>
         </div>
     );
 }

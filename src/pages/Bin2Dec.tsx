@@ -1,8 +1,8 @@
-import React, { FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 import styles from '../styles/pages/Bin2Dec.module.scss';
 
-function Bin2Dec() {
+export function Bin2Dec() {
 
     const [binInput, setBinInput] = useState("");
     const [decInput, setDecInput] = useState(0);
@@ -47,5 +47,3 @@ function Bin2Dec() {
         </form>
     );
 }
-
-export default Bin2Dec;

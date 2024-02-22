@@ -2,7 +2,7 @@ import { CSSProperties, useRef, useState } from 'react'
 
 import styles from '../styles/pages/BorderRadiusPreviewer.module.scss';
 
-function BorderRadiusPreviewer() {
+export function BorderRadiusPreviewer() {
     const [leftAxis, setLeftAxis] = useState('0');
     const [rightAxis, setRightAxis] = useState('0');
     const [topAxis, setTopAxis] = useState('0');
@@ -41,5 +41,3 @@ function BorderRadiusPreviewer() {
         </div>
     );
 }
-
-export default BorderRadiusPreviewer;
