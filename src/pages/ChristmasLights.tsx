@@ -27,7 +27,7 @@ export function ChristmasLights() {
 
                 {rows.map((row, key) => {
                     return (
-                        <Row key={row} isTheLightsOn={isTheLightsOn} index={key} removeRow={removeRow} />
+                        <Row key={row} isTheLightsOn={isTheLightsOn} index={key} removeRow={removeRow} rowsQuantity={rows.length} />
                     )
                 })}
 
@@ -46,10 +46,11 @@ export function ChristmasLights() {
 interface RowProps {
     isTheLightsOn: boolean,
     index: number,
+    rowsQuantity: number,
     removeRow: (index: number) => void;
 }
 
-function Row({ isTheLightsOn, index, removeRow }: RowProps) {
+function Row({ isTheLightsOn, index, removeRow, rowsQuantity }: RowProps) {
 
     return (
         <div>
@@ -60,7 +61,9 @@ function Row({ isTheLightsOn, index, removeRow }: RowProps) {
             <Light isTheLightsOn={isTheLightsOn} />
             <Light isTheLightsOn={isTheLightsOn} />
             <Light isTheLightsOn={isTheLightsOn} />
-            <button type='button' onClick={() => removeRow(index)}><MinusCircle /></button>
+            {rowsQuantity > 1 &&
+                <button type='button' onClick={() => removeRow(index)}><MinusCircle /></button>
+            }
         </div>
     )
 }
@@ -75,6 +78,8 @@ function Light({ isTheLightsOn }: LightProps) {
     const [isControlOpened, setIsControlOpened] = useState(false);
     const [selectedColor, setSelectedColor] = useState('var(--primary)');
     const lightIndividualControlRef = useRef<HTMLDivElement>(null);
+    const [intensity, setIntensity] = useState(50);
+    const [maxIntensity, setMaxIntensity] = useState(50);
 
     useEffect(() => {
         document.addEventListener("mousedown", handleOutsideClick);
@@ -96,7 +101,13 @@ function Light({ isTheLightsOn }: LightProps) {
 
     return (
         <div className={styles.light}>
-            <span onClick={toggleControlSection} style={{ backgroundColor: `${!isTheLightsOn ? 'var(--border-color' : selectedColor}` }}></span>
+            <span onClick={toggleControlSection} style={
+                {
+                    backgroundColor: `${!isTheLightsOn ? 'var(--border-color' : selectedColor}`
+                    , boxShadow: `${isTheLightsOn ? `0px 1px 10px 1px ${selectedColor}` : 'none'}`
+                }
+            }>
+            </span>
             {isControlOpened &&
                 <section className={styles.lightIndividualControl} ref={lightIndividualControlRef}>
 
@@ -104,13 +115,21 @@ function Light({ isTheLightsOn }: LightProps) {
                         <label htmlFor="">Cor:</label>
                         <input id="colorpicker" type="color" value={selectedColor} onChange={(e) => setSelectedColor(e.target.value)} />
                         <label htmlFor="colorpicker" style={{ backgroundColor: selectedColor }}>
-                            <p style={{ color: selectedColor }}>{selectedColor}</p>
+                            <p style={{ color: selectedColor }}>{selectedColor !== 'var(--primary)' ? selectedColor : 'Escolha uma cor...'}</p>
                         </label>
                     </div>
 
                     <div className={styles.inputGroup}>
                         <label htmlFor="">Intensidade máxima:</label>
-                        <input type="number" />
+                        <div className={styles.rangeAux}>
+                            <input type="range" min={0} max={100} defaultValue={50} onChange={(e) => setMaxIntensity(Number(e.target.value))} />
+                            <p>{maxIntensity}%</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.inputGroup}>
+                        <label htmlFor="">Tamanho</label>
+                        <input type="range" />
                     </div>
 
                 </section>
